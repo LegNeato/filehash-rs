@@ -2,9 +2,36 @@ use std::{
     collections::hash_map::DefaultHasher,
     fs::File,
     hash::{Hash, Hasher},
-    io::{prelude::*, Error},
+    io::{Error, Read},
     path::Path,
 };
+
+/// ```rust
+/// // A simple example of a program that queries the user
+/// // for a file to hash and prints the result.
+/// # use std::error::Error;
+/// # use filehash_rs::filehash;
+/// fn main() -> Result<(), Box<dyn Error>> {
+///    let mut input_string = String::new();
+///    println!("Path to the file:");
+///
+///    std::io::stdin().read_line(&mut input_string)?;
+/// #  input_string = String::from("./mock/textfile.txt");
+///
+///    let result = filehash(&mut input_string);
+///
+///    match result {
+///        Ok(value) => {
+///            println!("{}", value);
+///            return Ok(());
+///        }
+///        Err(err) => {
+///            println!("Error: {}", err);
+///            return Err(Box::new(err));
+///        }
+///    }
+/// }
+/// ```
 
 pub fn filehash(file_path: &mut String) -> Result<u64, Error> {
     let tmp = file_path.trim();
