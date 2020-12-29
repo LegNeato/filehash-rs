@@ -16,7 +16,7 @@ use std::{
 ///    println!("Path to the file:");
 ///
 ///    std::io::stdin().read_line(&mut input_string)?;
-/// #  input_string = String::from("./mock/textfile.txt");
+/// #  input_string = String::from("./mock/mock.txt");
 ///
 ///    let result = filehash(&mut input_string);
 ///
@@ -56,24 +56,24 @@ mod tests {
 
     #[test]
     fn it_generates_consistent_results_png() {
-        let mut mock_file1 = String::from("./mock/imagefile.png");
-        let mut mock_file2 = String::from("./mock/imagefile.png");
+        let mut mock_file1 = String::from("./mock/mock.png");
+        let mut mock_file2 = String::from("./mock/mock.png");
         let result1 = filehash(&mut mock_file1);
         let result2 = filehash(&mut mock_file2);
         assert_eq!(result1.unwrap(), result2.unwrap());
     }
     #[test]
     fn it_generates_consistent_results_txt() {
-        let mut mock_file1 = String::from("./mock/imagefile.txt");
-        let mut mock_file2 = String::from("./mock/imagefile.txt");
+        let mut mock_file1 = String::from("./mock/mock.txt");
+        let mut mock_file2 = String::from("./mock/mock.txt");
         let result1 = filehash(&mut mock_file1);
         let result2 = filehash(&mut mock_file2);
         assert_eq!(result1.unwrap(), result2.unwrap());
     }
     #[test]
     fn it_generates_consistent_results_json() {
-        let mut mock_file1 = String::from("./mock/imagefile.json");
-        let mut mock_file2 = String::from("./mock/imagefile.json");
+        let mut mock_file1 = String::from("./mock/mock.json");
+        let mut mock_file2 = String::from("./mock/mock.json");
         let result1 = filehash(&mut mock_file1);
         let result2 = filehash(&mut mock_file2);
         assert_eq!(result1.unwrap(), result2.unwrap());
