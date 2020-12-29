@@ -13,11 +13,11 @@ fn main() -> Result<(), Box<dyn Error>> {
     match result {
         Ok(value) => {
             println!("{}", value);
+            return Ok(());
         }
         Err(err) => {
             println!("Error: {}", err);
+            return Err(Box::new(err));
         }
     }
-
-    Ok(())
 }
