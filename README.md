@@ -1,5 +1,5 @@
 # filehash-rs
-A small, fast library for hashing files written in Rust.
+A small (3kb), fast library for hashing files written in Rust.
 
 ### Usage
 See the `examples` directory for some example usages.
