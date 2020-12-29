@@ -4,6 +4,7 @@ categories = ["filesystem", "development-tools"]
 description = "A small, fast library for hashing files written in Rust."
 documentation = "https://docs.rs/filehash-rs"
 edition = "2018"
+exclude = ["mock/*"]
 homepage = "https://github.com/doddydigitaldesign/filehash-rs"
 keywords = ["filesystem", "hashing"]
 license = "MIT"
@@ -11,7 +12,6 @@ name = "filehash-rs"
 readme = "README.md"
 repository = "https://github.com/doddydigitaldesign/filehash-rs"
 version = "1.0.0"
-
 [profile.release]
 debug = false
 lto = true
