@@ -1,0 +1,14 @@
+{
+    "boolean": true,
+    "string": "hello",
+    "number": 1234567890,
+    "nested": {
+        "nested": {
+            "nested": {
+                "nested": {
+                    "data": ["abc123"]
+                }
+            }
+        }
+    }
+}
