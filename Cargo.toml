@@ -12,6 +12,7 @@ name = "filehash-rs"
 readme = "README.md"
 repository = "https://github.com/doddydigitaldesign/filehash-rs"
 version = "1.0.0"
+
 [profile.release]
 debug = false
 lto = true
